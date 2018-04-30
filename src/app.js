@@ -1,6 +1,7 @@
 const http = require('http')
 const { formGenerator } = require('./tool.js')
-const inputs = [
+
+const formInputs = [
   {
     type: 'text' 
   }, {

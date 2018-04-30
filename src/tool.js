@@ -1,6 +1,5 @@
-module.exports.formGenerator = (inputs) => {
+module.exports.formGenerator = (inputs=[]) => {
   let html = '<form>'
-
   for (let i = 0; i < inputs.length; i++) {
     if (
       inputs[i].type === 'text' ||

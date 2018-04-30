@@ -1,21 +1,31 @@
-const { formBuilder } = require('./src/tool')
-const inputs = [
+const assert = require('assert')
+const { formGenerator } = require('../src/tool.js')
+
+const testCorrectFormat = [
   {
-    type: 'text' 
+    type: 'text'
   }, {
-    type: 'select'
+    type: 'email'
   }, {
     type: 'number'
   }, {
-    type: 'radio'
-  }, {
-    type: 'button'
+    type: 'submit'
   }
 ]
 
-if (typeof formBuilder(inputs) === 'string') {
-  console.log('true')
-}
-else {
-  console.log('false')
-}
+const testBadFormat = [
+  {
+    type: 'text',
+    num: 0
+  }, {
+    bool: false
+  }, {
+    type: 'wrong'
+  }, {
+    object: {}
+  }
+]
+
+assert(typeof formGenerator() === 'string', 'Error, return type invalid for default input argument.')
+assert(typeof formGenerator(testCorrectFormat) === 'string', 'Error, return type invalid for correct input.')
+assert(typeof formGenerator(testBadFormat) === 'string', 'Error, return type invalid for bad input object.')
