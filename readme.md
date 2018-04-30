@@ -58,5 +58,18 @@ cd ColabCode
 
 And finally, run the application
 ```
-node src/app.js
+npm start
+```
+
+### Testing
+
+The testing runs three different tests using Node's built-in assert library, to make sure the proper output is being produced.
+
+* Test the form generator with its own default value
+* Test with correct format
+* Test with bad format
+
+If successful, the tests should have no outputs. To run the test do:
+```
+npm run test
 ```
