@@ -1,5 +1,5 @@
-module.exports.formBuilder = (inputs) => {
-  let html = ''
+module.exports.formGenerator = (inputs) => {
+  let html = '<form>'
 
   for (let i = 0; i < inputs.length; i++) {
     if (
@@ -11,6 +11,6 @@ module.exports.formBuilder = (inputs) => {
       html += `<input type="${inputs[i].type}"></input>`
     }
   }
-
+  html += '</form>'
   return html
 }
