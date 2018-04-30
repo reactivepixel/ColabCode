@@ -15,7 +15,7 @@ const builder = function(data) {
       markdown += `# ${value} `;
     }
   });
-  console.log('My Markdown \r\n', markdown);
+  util.log('My Markdown \r\n', markdown);
   return markdown
 };
 
