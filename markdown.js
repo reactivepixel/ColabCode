@@ -10,13 +10,16 @@ const dataset = [
   { type: 'h6', value: 'H6 Hello'},
   { type: 'list', text: '1. One 2. Two 3. Three 4. Four 5. Five'},
   { type: 'list', text: '* Five * Four * Three * Two * One'},
+  { type: 'link', link: { text: 'Link One Google', url: 'google.com'} },
+  { type: 'link', link: { text: 'Link Two Yahoo', url: 'yahoo.com'} },
+  { type: 'link', link: { text: 'Link Three Reddit', url: 'reddit.com'} },
 ];
 
 let markdown = [];
 
 const builder = function(data) {
   data.forEach(element => {
-    const { type, value, text } = element;
+    const { type, value, text, link } = element;
 
     if (type == "h1") {
       markdown += `# ${value} `;
@@ -38,6 +41,15 @@ const builder = function(data) {
     }
     if (type == "list") {
       markdown += `${text} `;
+    }
+    if (type == "link") {
+      markdown += `[${link.text}](${link.url})`;
+    }
+    if (type == "link") {
+      markdown += `[${link.text}](${link.url})`;
+    }
+    if (type == "link") {
+      markdown += `[${link.text}](${link.url})`;
     }
   });
   util.log('My Markdown \r\n', markdown);
