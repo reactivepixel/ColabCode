@@ -20,6 +20,9 @@ exports.buildForm = tools => {
           case "button":
             copy += `<br/><br/><button type="${tool.id}" id="${tool.id}">${tool.text}</button>`;
             break;
+
+          default:
+            copy+=``;
         }
       }
     });
