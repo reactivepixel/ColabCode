@@ -54,8 +54,13 @@ const builder = function(data) {
       markdown += nl + '```' + `${code}` + '```' + nl;
     }
   });
-  util.log('My Markdown \r\n', markdown);
+  util.log('My Markdown \n', markdown);
   return markdown
 };
 
-builder(dataset)
+fs.writeFile("./temp/readme.md", builder(dataset), function(err) {
+  if(err) {
+      return console.log(err);
+  }
+  console.log("Markdown was created!");
+});
