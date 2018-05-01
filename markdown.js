@@ -8,15 +8,15 @@ const dataset = [
   { type: 'h4', value: 'H4 Hello'},
   { type: 'h5', value: 'H5 Hello'},
   { type: 'h6', value: 'H6 Hello'},
-  { type: 'list', text: '1. One 2. Two 3. Three 4. Four 5. Five'},
-  { type: 'list', text: '1. One   1. Two 4. Three'},
-  { type: 'list', text: '* Five * Four * Three * Two * One'},
+  { type: 'list', text: '1. One\n2. Two\n3. Three\n4. Four\n5. Five\n'},
+  { type: 'list', text: '1. One\n  1. Two\n4. Three\n'},
+  { type: 'list', text: '* Five\n* Four\n* Three\n* Two\n* One\n'},
   { type: 'link', link: { text: 'Link One Google', url: 'google.com'} },
   { type: 'link', link: { text: 'Link Two Yahoo', url: 'yahoo.com'} },
   { type: 'link', link: { text: 'Link Three Reddit', url: 'reddit.com'} },
-  { type: 'code', code: '<h1>H1 Title</h1> <p>This is a code block filler text.</p>'},
-  { type: 'code', code: '<h2>H2 Title</h2> <p>This is a code block filler text number two.</p>'},
-  { type: 'code', code: '<h3>H3 Title</h3> <p>This is a code block filler text number Three.</p>'},
+  { type: 'code', code: '\n<h1>H1 Title</h1>\n<p>This is a code block filler text.</p>\n'},
+  { type: 'code', code: '\n<h2>H2 Title</h2>\n<p>This is a code block filler text number two.</p>\n'},
+  { type: 'code', code: '\n<h3>H3 Title</h3>\n<p>This is a code block filler text number Three.</p>\n'},
 ];
 
 let markdown = [];
@@ -62,5 +62,5 @@ fs.writeFile("./temp/readme.md", builder(dataset), function(err) {
   if(err) {
       return console.log(err);
   }
-  console.log("Markdown was created!");
+  util.log("Markdown was created!");
 });
