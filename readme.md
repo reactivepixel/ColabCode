@@ -1,6 +1,6 @@
 # Matt Pezzente - Form Generator
 
-This simple Node application generates a form based on given input types. To render a form, simply add on to the "inputs" variable inside of app.js.
+This simple Node application generates a form based on given input types. To render a form, simply add on to the "formInputs" variable inside of app.js.
 
 ```
 app.js
@@ -56,9 +56,18 @@ Then navigate to the folder
 cd ColabCode
 ```
 
-And finally, run the application
+And finally, to start the server for the application, run:
 ```
 npm start
+```
+
+#### NOTE: 
+Executing this command will start a server on your local computer, which can be accessed by typing "localhost:8000" into your browser window.
+
+If working correctly, it should appear as follows:
+```
+> deployment-assignment-1@1.0.0 start /some/file/url
+> node src/app
 ```
 
 ### Testing
@@ -69,7 +78,13 @@ The testing runs three different tests using Node's built-in assert library, to 
 * Test with correct format
 * Test with bad format
 
-If successful, the tests should have no outputs. To run the test do:
+To run the test do:
 ```
-npm run test
+npm test
+```
+
+If successful, the tests should just ouput:
+```
+> deployment-assignment-1@1.0.0 test /some/file/url
+> node tests/test
 ```
