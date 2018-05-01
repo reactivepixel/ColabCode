@@ -1,6 +1,6 @@
 const tool = require('./src/tool');
 
-let formbuilder = [
+let formBuilder = [
 
   // Text Inputs
   {
@@ -45,4 +45,4 @@ let formbuilder = [
   }
 ];
 
-console.log(tool.buildForm(formbuilder));
+console.log(tool.buildForm(formBuilder));
