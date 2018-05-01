@@ -22,6 +22,12 @@ Clone Repo
 $ git clone https://github.com/reactivepixel/ColabCode.git
 ```
 
+Switch to formbuilder-BrennonDenny branch for testing
+
+```
+$ git checkout formbuilder-BrennonDenny
+```
+
 ## Deployment
 
 Locate the ColabCode Folder
