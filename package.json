@@ -1,0 +1,20 @@
+{
+    "name": "bhess-markdown",
+    "version": "1.0.1",
+    "description": "Simple markdown builder",
+    "main": "markdown.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node markdown"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/reactivepixel/ColabCode.git"
+    },
+    "author": "BHess2653",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/reactivepixel/ColabCode/issues"
+    },
+    "homepage": "https://github.com/reactivepixel/ColabCode#readme",
+}
