@@ -45,12 +45,6 @@ const builder = function(data) {
     if (type == "link") {
       markdown += `[${link.text}](${link.url})`;
     }
-    if (type == "link") {
-      markdown += `[${link.text}](${link.url})`;
-    }
-    if (type == "link") {
-      markdown += `[${link.text}](${link.url})`;
-    }
   });
   util.log('My Markdown \r\n', markdown);
   return markdown
