@@ -8,13 +8,15 @@ const dataset = [
   { type: 'h4', value: 'H4 Hello'},
   { type: 'h5', value: 'H5 Hello'},
   { type: 'h6', value: 'H6 Hello'},
+  { type: 'list', text: '1. One 2. Two 3. Three 4. Four 5. Five'},
+  { type: 'list', text: '* Five * Four * Three * Two * One'},
 ];
 
 let markdown = [];
 
 const builder = function(data) {
   data.forEach(element => {
-    const { type, value } = element;
+    const { type, value, text } = element;
 
     if (type == "h1") {
       markdown += `# ${value} `;
@@ -33,6 +35,9 @@ const builder = function(data) {
     }
     if (type == "h6") {
       markdown += `###### ${value} `;
+    }
+    if (type == "list") {
+      markdown += `${text} `;
     }
   });
   util.log('My Markdown \r\n', markdown);
