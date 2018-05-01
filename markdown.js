@@ -8,9 +8,9 @@ const dataset = [
   { type: 'h4', value: 'H4 Hello'},
   { type: 'h5', value: 'H5 Hello'},
   { type: 'h6', value: 'H6 Hello'},
-  { type: 'list', text: '1. One\n2. Two\n3. Three\n4. Four\n5. Five\n'},
-  { type: 'list', text: '1. One\n  1. Two\n4. Three\n'},
-  { type: 'list', text: '* Five\n* Four\n* Three\n* Two\n* One\n'},
+  { type: 'list', text: '\n1. One\n2. Two\n3. Three\n4. Four\n5. Five\n'},
+  { type: 'list', text: '\n1. One\n  1. Two\n4. Three\n'},
+  { type: 'list', text: '\n* Five\n* Four\n* Three\n* Two\n* One\n'},
   { type: 'link', link: { text: 'Link One Google', url: 'google.com'} },
   { type: 'link', link: { text: 'Link Two Yahoo', url: 'yahoo.com'} },
   { type: 'link', link: { text: 'Link Three Reddit', url: 'reddit.com'} },
@@ -60,7 +60,7 @@ const builder = function(data) {
 
 fs.writeFile("./temp/readme.md", builder(dataset), function(err) {
   if(err) {
-      return console.log(err);
+      return util.log(err);
   }
   util.log("Markdown was created!");
 });
