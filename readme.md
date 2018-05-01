@@ -27,7 +27,7 @@ $ cd ColabCode
 Run the app
 
 ```
-$ node markdown
+$ npm start
 ```
 
 ## Functionality
