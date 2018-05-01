@@ -9,17 +9,21 @@ const dataset = [
   { type: 'h5', value: 'H5 Hello'},
   { type: 'h6', value: 'H6 Hello'},
   { type: 'list', text: '1. One 2. Two 3. Three 4. Four 5. Five'},
+  { type: 'list', text: '1. One   1. Two 4. Three'},
   { type: 'list', text: '* Five * Four * Three * Two * One'},
   { type: 'link', link: { text: 'Link One Google', url: 'google.com'} },
   { type: 'link', link: { text: 'Link Two Yahoo', url: 'yahoo.com'} },
   { type: 'link', link: { text: 'Link Three Reddit', url: 'reddit.com'} },
+  { type: 'code', code: '<h1>H1 Title</h1> <p>This is a code block filler text.</p>'},
+  { type: 'code', code: '<h2>H2 Title</h2> <p>This is a code block filler text number two.</p>'},
+  { type: 'code', code: '<h3>H3 Title</h3> <p>This is a code block filler text number Three.</p>'},
 ];
 
 let markdown = [];
 
 const builder = function(data) {
   data.forEach(element => {
-    const { type, value, text, link } = element;
+    const { type, value, text, link, code } = element;
 
     if (type == "h1") {
       markdown += `# ${value} `;
@@ -44,6 +48,9 @@ const builder = function(data) {
     }
     if (type == "link") {
       markdown += `[${link.text}](${link.url})`;
+    }
+    if (type == "code") {
+      markdown += '```' + `${code}` + '```';
     }
   });
   util.log('My Markdown \r\n', markdown);
