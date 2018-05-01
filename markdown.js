@@ -24,33 +24,34 @@ let markdown = [];
 const builder = function(data) {
   data.forEach(element => {
     const { type, value, text, link, code } = element;
+    const nl = '\n'; // New Line
 
     if (type == "h1") {
-      markdown += `# ${value} `;
+      markdown += nl + `# ${value} ` + nl;
     }
     if (type == "h2") {
-      markdown += `## ${value} `;
+      markdown += nl + `## ${value} ` + nl;
     }
     if (type == "h3") {
-      markdown += `### ${value} `;
+      markdown += nl + `### ${value} ` + nl;
     }
     if (type == "h4") {
-      markdown += `#### ${value} `;
+      markdown += nl + `#### ${value} ` + nl;
     }
     if (type == "h5") {
-      markdown += `##### ${value} `;
+      markdown += nl + `##### ${value} ` + nl;
     }
     if (type == "h6") {
-      markdown += `###### ${value} `;
+      markdown += nl + `###### ${value} ` + nl;
     }
     if (type == "list") {
-      markdown += `${text} `;
+      markdown += nl + `${text} ` + nl;
     }
     if (type == "link") {
-      markdown += `[${link.text}](${link.url})`;
+      markdown += nl + `[${link.text}](${link.url})` + nl;
     }
     if (type == "code") {
-      markdown += '```' + `${code}` + '```';
+      markdown += nl + '```' + `${code}` + '```' + nl;
     }
   });
   util.log('My Markdown \r\n', markdown);
