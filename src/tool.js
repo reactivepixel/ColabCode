@@ -33,8 +33,14 @@ exports.builder = (data) => {
     if (type == "link") {
       markdown += nl + `[${link.text}](${link.url})` + nl;
     }
-    if (type == "code") {
+    if (type == "code_js") {
       markdown += nl + '```js' + `${code}` + '```' + nl;
+    }
+    if (type == "code_css") {
+      markdown += nl + '```css' + `${code}` + '```' + nl;
+    }
+    if (type == "code_md") {
+      markdown += nl + '```md' + `${code}` + '```' + nl;
     }
   });
   console.log('My Markdown \n', markdown);

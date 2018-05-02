@@ -18,9 +18,9 @@ const dataset = [
   { type: 'link', link: { text: 'Link Two Yahoo', url: 'yahoo.com'} },
   { type: 'link', link: { text: 'Link Three Reddit', url: 'reddit.com'} },
   { type: 'title', value: 'Code Blocks'},
-  { type: 'code', code: '\n<h1>H1 Title</h1>\n<p>This is a code block filler text.</p>\n'},
-  { type: 'code', code: '\n<h2>H2 Title</h2>\n<p>This is a code block filler text number two.</p>\n'},
-  { type: 'code', code: '\n<h3>H3 Title</h3>\n<p>This is a code block filler text number Three.</p>\n'},
+  { type: 'code_js', code: '\n// js\nvar answer = 6 * 7;\nconsole.log(answer);\n'},
+  { type: 'code_css', code: '\n/* css */\nh2 {\n  font-family: sans-serif;\n  color: #000;\n}\n'},
+  { type: 'code_md', code: '\n<!-- md -->\n# H3 Title\n\nThis is a code block filler text number Three.\n'},
 ];
 
 fs.writeFile("./temp/readme.md", util.builder(dataset), function(err) {

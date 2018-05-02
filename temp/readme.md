@@ -48,16 +48,22 @@
 ## Code Blocks 
 
 ```js
-<h1>H1 Title</h1>
-<p>This is a code block filler text.</p>
+// js
+var answer = 6 * 7;
+console.log(answer);
 ```
 
-```js
-<h2>H2 Title</h2>
-<p>This is a code block filler text number two.</p>
+```css
+/* css */
+h2 {
+  font-family: sans-serif;
+  color: #000;
+}
 ```
 
-```js
-<h3>H3 Title</h3>
-<p>This is a code block filler text number Three.</p>
+```md
+<!-- md -->
+# H3 Title
+
+This is a code block filler text number Three.
 ```
