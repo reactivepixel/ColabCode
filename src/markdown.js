@@ -10,7 +10,7 @@ const dataSet = [
   { type: 'h5', text: '##### H5 Header'},
   { type: 'h6', text: '###### H6 Header'},
   { type: 'title', text: '## Lists Ordered, Unordered sub-list, Unordered'},
-  { type: 'list', text: '1. One\n2. Two\n3. Three\n4. Four\n5. Five\n'},
+  { type: 'list', text: '1. One\n2. Two\n3. Three\n4. Four\n5. Five\n  * six\n'},
   { type: 'list', text: '1. One\n  * Two\n4. Three\n'},
   { type: 'list', text: '* Five\n* Four\n* Three\n* Two\n* One\n'},
   { type: 'title', text: '## Links'},
