@@ -1,14 +1,12 @@
-exports.buildForm = tools => {
+exports.buildForm = inputs => {
   let copy = "";
   try {
-    tools.forEach(tool => {
+    inputs.forEach(tool => {
       if (tool.type) {
         switch (tool.type) {
           case "text":
-          case "username":
-          case "password":
           //Save all Text Input for Copy
-            copy += `<input type="${tool.type}" id="${tool.id}" placeholder="${tool.placeholder}"required="${tool.required}"/><br/><br/>`;
+            copy += `<input type="${tool.type}" id="${tool.id}" placeholder="${tool.placeholder}"required="${tool.required}"/>`;
             break;
 
           //Save all Select Inputs to Copy
@@ -18,7 +16,7 @@ exports.buildForm = tools => {
 
           //Save all Button Inputs to Copy
           case "button":
-            copy += `<br/><br/><button type="${tool.id}" id="${tool.id}">${tool.text}</button>`;
+            copy += `<button type="${tool.id}" id="${tool.id}">${tool.text}</button>`;
             break;
 
           default:
@@ -27,7 +25,7 @@ exports.buildForm = tools => {
       }
     });
   } catch (e) {
-    console.log("Error: " + e);
+    console.error("Error: " + e);
   }
-  return copy
+  return `<form>${copy}</form>`
 };
