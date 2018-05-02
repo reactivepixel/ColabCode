@@ -23,51 +23,10 @@ const dataset = [
   { type: 'code', code: '\n<h3>H3 Title</h3>\n<p>This is a code block filler text number Three.</p>\n'},
 ];
 
-let markdown = [];
-
-const builder = function(data) {
-  data.forEach(element => {
-    const { type, value, text, link, code } = element;
-    const nl = '\n'; // New Line
-
-    if (type == "title") {
-      markdown += nl + `## ${value} ` + nl;
-    }
-    if (type == "h1") {
-      markdown += nl + `# ${value} ` + nl;
-    }
-    if (type == "h2") {
-      markdown += nl + `## ${value} ` + nl;
-    }
-    if (type == "h3") {
-      markdown += nl + `### ${value} ` + nl;
-    }
-    if (type == "h4") {
-      markdown += nl + `#### ${value} ` + nl;
-    }
-    if (type == "h5") {
-      markdown += nl + `##### ${value} ` + nl;
-    }
-    if (type == "h6") {
-      markdown += nl + `###### ${value} ` + nl;
-    }
-    if (type == "list") {
-      markdown += nl + `${text} ` + nl;
-    }
-    if (type == "link") {
-      markdown += nl + `[${link.text}](${link.url})` + nl;
-    }
-    if (type == "code") {
-      markdown += nl + '```js' + `${code}` + '```' + nl;
-    }
-  });
-  util.log('My Markdown \n', markdown);
-  return markdown
-};
-
-fs.writeFile("./temp/readme.md", builder(dataset), function(err) {
+fs.writeFile("./temp/readme.md", util.builder(dataset), function(err) {
   if(err) {
-      return util.log(err);
+      return console.log(err);
+  } else {
+      console.log("Markdown was created!");
   }
-  util.log("Markdown was created!");
 });
