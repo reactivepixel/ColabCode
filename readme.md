@@ -46,14 +46,19 @@ Before running this application, make sure Node and Git are installed on your co
 
 #### Installing
 
-Clone the repo by entering the following command
+Clone the repo by entering the following command:
 ```
 git clone https://github.com/reactivepixel/ColabCode.git
 ```
 
-Then navigate to the folder
+Then navigate to the folder:
 ```
 cd ColabCode
+```
+
+Next, switch to the this branch using git:
+```
+git checkout form-generator
 ```
 
 And finally, to start the server for the application, run:
