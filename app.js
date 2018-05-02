@@ -1,6 +1,6 @@
 const tool = require('./src/tool');
 
-let formBuilder = [
+const formBuilder = [
 
   // Text Inputs
   {
@@ -10,10 +10,10 @@ let formBuilder = [
     placeholder: "username"
   },
   {
-    type: "password",
-    id: "password",
+    type: "text",
+    id: "email",
     required: "true",
-    placeholder: "password"
+    placeholder: "email"
   },
 
   // Select Inputs
@@ -29,7 +29,7 @@ let formBuilder = [
     id: "team",
     required: "false",
     option1: "red",
-    option2: "blue"
+    option2: "blue",
   },
 
   //Button Inputs
