@@ -44,7 +44,7 @@ Edit formbuilder in [App.js](/app.js)
 let formbuilder = [
   {
     //Text Inputs
-    type: "CUSTOM_INFO", //text or password
+    type: "text",
     id: "CUSTOM_INFO",
     required: "CUSTOM_INFO", //true or false
     placeholder: "CUSTOM_INFO"
