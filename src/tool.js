@@ -3,14 +3,15 @@ module.exports.formGenerator = (inputs=[]) => {
   // Begin the form
   let html = '<form method="POST">'
 
-  // Catches any issues with the incoming arguments
-  if (!inputs instanceof Array) {
+  // Validates that the incoming argument is an array
+  if (inputs instanceof Array === false) {
     return '<p>Error, argument not in array format</p>'
   }
 
   // Loop through each input item
   inputs.forEach(inputItem => {
-    let {label, type, name} = inputItem
+    let {id, label, type, name} = inputItem
+    let idAttribute = id == null ? '' : `id="${id}"`  
     let typeAttribute = type == null ? '' : `type="${type}"`  
     let forAttribute = name == null ? '' : `for="${name}"`  
     let nameAttribute = name == null ? '' : `name="${name}"`  
@@ -21,17 +22,17 @@ module.exports.formGenerator = (inputs=[]) => {
 
     // Makes a regular input type field
     if ( type === 'text' || type === 'email' || type === 'number') {
-      inputHTML = `<input ${typeAttribute} ${nameAttribute}/>`
+      inputHTML = `<input ${typeAttribute} ${idAttribute} ${nameAttribute}/>`
     }
 
     // Makes a button input
     if (type === 'submit') {
-      inputHTML = `<button ${typeAttribute} />Submit</button>`
+      inputHTML = `<button ${typeAttribute} ${idAttribute} />Submit</button>`
     }
 
     // Wraps input in label, then adds to the HTML
     if (label != null) {
-      html += `<label ${forAttribute}>${inputHTML}</label></p>`
+      html += `<label ${forAttribute}>${label}: ${inputHTML}</label></p>`
     }
     // No label, simply add input field to HTML
     else {

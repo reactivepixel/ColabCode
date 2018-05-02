@@ -4,14 +4,17 @@ const { formGenerator } = require('../src/tool.js')
 // Test variables for the correct input formats
 const testCorrectFormat = [
   {
+    id: 'username',
     label: 'Name',
     type: 'text',
-    name: 'name',
+    name: 'username',
   }, {
+    id: 'user_email',
     label: 'Email',
     type: 'email',
     name: 'email',
   }, {
+    id: 'user_number',
     label: 'Favorite Number',
     type: 'number',
     name: 'favorite_number',
