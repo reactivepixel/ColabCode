@@ -1,31 +1,31 @@
-exports.builder = (data) => {
+exports.builder = (markdownInput) => {
 
   let markdown = [];
 
-  data.forEach(element => {
-    const { type, value, text, link, code } = element;
+  markdownInput.forEach(inputData => {
+    const { type, text, link, code } = inputData;
     const nl = '\n'; // New Line
 
     if (type == "title") {
-      markdown += nl + `## ${value} ` + nl;
+      markdown += nl + `## ${text} ` + nl;
     }
     if (type == "h1") {
-      markdown += nl + `# ${value} ` + nl;
+      markdown += nl + `# ${text} ` + nl;
     }
     if (type == "h2") {
-      markdown += nl + `## ${value} ` + nl;
+      markdown += nl + `## ${text} ` + nl;
     }
     if (type == "h3") {
-      markdown += nl + `### ${value} ` + nl;
+      markdown += nl + `### ${text} ` + nl;
     }
     if (type == "h4") {
-      markdown += nl + `#### ${value} ` + nl;
+      markdown += nl + `#### ${text} ` + nl;
     }
     if (type == "h5") {
-      markdown += nl + `##### ${value} ` + nl;
+      markdown += nl + `##### ${text} ` + nl;
     }
     if (type == "h6") {
-      markdown += nl + `###### ${value} ` + nl;
+      markdown += nl + `###### ${text} ` + nl;
     }
     if (type == "list") {
       markdown += nl + `${text} ` + nl;
