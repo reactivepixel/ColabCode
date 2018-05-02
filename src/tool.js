@@ -13,12 +13,12 @@ module.exports.builder = (markdownInput) => {
           case "h6":
           case "list":
             // All Text Inputs
-            markdown += `\n ${inputData.text} \n`;
+            markdown += `\n${inputData.text}\n`;
             break;
 
           case "link":
             // All Link Inputs
-            markdown += `\n [${inputData.link.text}](${inputData.link.url}) \n`;
+            markdown += `\n[${inputData.link.text}](${inputData.link.url})\n`;
             break;
 
           case "code_js":
