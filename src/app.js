@@ -4,7 +4,7 @@ const { formGenerator } = require('./tool.js')
 // Initialize form here
 const formInputs = [
   {
-    id: 'username',
+    id: 'user_name',
     label: 'Name',
     type: 'text',
     name: 'username',
