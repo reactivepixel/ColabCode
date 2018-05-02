@@ -1,48 +1,41 @@
 module.exports.builder = (markdownInput) => {
-
   let markdown = [];
+  try {
+    markdownInput.forEach(inputData => {
+      if (inputData.type) {
+        switch (inputData.type) {
+          case "title":
+          case "h1":
+          case "h2":
+          case "h3":
+          case "h4":
+          case "h5":
+          case "h6":
+          case "list":
+            // All Text Inputs
+            markdown += `\n ${inputData.text} \n`;
+            break;
 
-  markdownInput.forEach(inputData => {
-    const { type, text, link, code } = inputData;
-    const nl = '\n'; // New Line
+          case "link":
+            // All Link Inputs
+            markdown += `\n [${inputData.link.text}](${inputData.link.url}) \n`;
+            break;
 
-    if (type === "title") {
-      markdown += nl + `## ${text} ` + nl;
-    }
-    if (type === "h1") {
-      markdown += nl + `# ${text} ` + nl;
-    }
-    if (type === "h2") {
-      markdown += nl + `## ${text} ` + nl;
-    }
-    if (type === "h3") {
-      markdown += nl + `### ${text} ` + nl;
-    }
-    if (type === "h4") {
-      markdown += nl + `#### ${text} ` + nl;
-    }
-    if (type === "h5") {
-      markdown += nl + `##### ${text} ` + nl;
-    }
-    if (type === "h6") {
-      markdown += nl + `###### ${text} ` + nl;
-    }
-    if (type === "list") {
-      markdown += nl + `${text} ` + nl;
-    }
-    if (type === "link") {
-      markdown += nl + `[${link.text}](${link.url})` + nl;
-    }
-    if (type === "code_js") {
-      markdown += nl + '```js' + `${code}` + '```' + nl;
-    }
-    if (type === "code_css") {
-      markdown += nl + '```css' + `${code}` + '```' + nl;
-    }
-    if (type === "code_md") {
-      markdown += nl + '```md' + `${code}` + '```' + nl;
-    }
-  });
+          case "code_js":
+          case "code_css":
+          case "code_md":
+            // All Code Inputs
+            markdown += '\n```' + `${inputData.code}` + '```\n';
+            break;
+
+          default:
+            markdown += ``;
+        }
+      }
+    });
+  } catch (error) {
+    console.log("Error: " + error);
+  }
   console.log('My Markdown \n', markdown);
   return markdown
 };
