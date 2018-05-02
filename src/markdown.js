@@ -1,4 +1,4 @@
-const util = require('./src/tool');
+const util = require('./tool');
 const fs = require('fs');
 
 const dataset = [
