@@ -1,8 +1,8 @@
 {
-  "name": "deployment-assignment-1",
+  "name": "Form-Generator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "node tests/test",
     "start": "node src/app"
