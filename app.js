@@ -1,7 +1,6 @@
 const tool = require('./src/tool');
 
 const formBuilder = [
-
   // Text Inputs
   {
     type: "text",
@@ -21,6 +20,7 @@ const formBuilder = [
     type: "select",
     id: "gender",
     required: "true",
+    //two available options
     option1: "male",
     option2: "female"
   },
@@ -28,8 +28,9 @@ const formBuilder = [
     type: "select",
     id: "team",
     required: "false",
+    //two available options
     option1: "red",
-    option2: "blue",
+    option2: "blue"
   },
 
   //Button Inputs
