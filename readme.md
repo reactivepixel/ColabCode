@@ -24,6 +24,12 @@ Go to the ColabCode Folder
 $ cd ColabCode
 ```
 
+checkout bhess-markdown
+
+```
+$ git checkout bhess-markdown
+```
+
 Run the app
 
 ```
