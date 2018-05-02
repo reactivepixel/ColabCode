@@ -2,12 +2,6 @@
 
 **Form Builder** is a simple node application that generates a form based on given inputs.
 
-<div align="center">
-
-​		<img src="/docs/demo.png" width="220">
-
-</div>
-
 ## Getting Started
 
 ### Prerequisites
@@ -49,12 +43,30 @@ Edit formbuilder in [App.js](/app.js)
 ```javascript
 let formbuilder = [
   {
-    type: "CUSTOM_INFO",
+    //Text Inputs
+    type: "CUSTOM_INFO", //text or password
     id: "CUSTOM_INFO",
-    required: "CUSTOM_INFO",
+    required: "CUSTOM_INFO", //true or false
     placeholder: "CUSTOM_INFO"
-  }
+  },
+  {
+  	//Select Inputs
+    type: "select",
+    id: "CUSTOM_INFO",
+    required: "CUSTOM_INFO", //true or false
+    option1: "CUSTOM_INFO" //set first option in select
+    option2: "CUSTOM_INFO" //set second option in select
+  },
+   	//Button Input
+    {
+    type: "button",
+    id: "CUSTOM_INFO",
+    text: "CUSTOM_INFO"
+  } 
+]
+    
 ```
+
 
 
 
