@@ -8,5 +8,8 @@
     "start": "node src/app"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2"
+  }
 }
