@@ -13,7 +13,7 @@ const dataSet = [
   { type: 'text', text: 'This is a ordered list'},
   { type: 'list', text: '1. One\n2. Two\n3. Three\n4. Four\n5. Five'},
   { type: 'text', text: 'This is a Unordered sub-list'},
-  { type: 'list', text: '* One\n   * Two\n    * Three\n* four\n  * Six'},
+  { type: 'list', text: '* One\n  * Two\n    * Three\n* four\n  * Six'},
   { type: 'text', text: 'This is a unordered list'},
   { type: 'list', text: '* Five\n* Four\n* Three\n* Two\n* One'},
   { type: 'title', text: '## Links'},
