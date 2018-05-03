@@ -1,3 +1,5 @@
+const utils = require('apex-util');
+
 exports.buildForm = (inputs) => {
   let copy = '';
   try {
@@ -25,7 +27,7 @@ exports.buildForm = (inputs) => {
       }
     });
   } catch (e) {
-    console.error(`Error: ${e}`);
+    utils.log(`Error: ${e}`);
   }
   return `<form>${copy}</form>`;
 };

@@ -1,4 +1,5 @@
 const tool = require('./src/tool');
+const utils = require('apex-util');
 
 const formBuilder = [
   // Text Inputs
@@ -46,4 +47,4 @@ const formBuilder = [
   },
 ];
 
-console.log(tool.buildForm(formBuilder));
+utils.log(tool.buildForm(formBuilder));
