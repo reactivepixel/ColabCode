@@ -40,5 +40,6 @@ module.exports.formGenerator = (inputs=[]) => {
     }
   })
   html += '</form>'
+  console.error('Hello')
   return html
 }
