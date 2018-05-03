@@ -30,6 +30,12 @@ Locate the ColabCode Folder
 $ cd ColabCode
 ```
 
+Install Dev Dependencies
+
+```
+$ npm install 
+```
+
 Run on your Local Machine
 
 ```
@@ -69,4 +75,13 @@ let formbuilder = [
 
 
 
+## Testing
+
+Make sure to Install [ESlint](https://eslint.org/) on your local machine.
+
+Run Test
+
+```
+$ npm test
+```
 
