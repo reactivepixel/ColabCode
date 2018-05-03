@@ -13,7 +13,9 @@
 
 ###### H6 Header
 
-## Lists Ordered, Unordered sub-list, Unordered
+## Lists
+
+This is a ordered list
 
 1. One
 2. Two
@@ -21,19 +23,21 @@
 4. Four
 5. Five
 
+This is a Unordered sub-list
 
 1. One
   * Two
     * Three
 4. four
+  * Six
 
+This is a unordered list
 
 * Five
 * Four
 * Three
 * Two
 * One
-
 
 ## Links
 

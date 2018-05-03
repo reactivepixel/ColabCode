@@ -5,6 +5,7 @@ module.exports.builder = (markdownInput) => {
       if (inputData.type) {
         switch (inputData.type) {
           case "title":
+          case "text":
           case "h1":
           case "h2":
           case "h3":
