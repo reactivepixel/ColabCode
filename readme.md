@@ -5,20 +5,30 @@ This simple Node application generates a form based on given input types. To ren
 ```
 app.js
 
-const http = require('http')
-const { formGenerator } = require('./tool.js')
+const http = require('http');
+const { formGenerator } = require('./tool.js');
 
+// Initialize form here
 const formInputs = [
   {
-    type: 'text' 
+    id: 'user_name',
+    label: 'Name',
+    type: 'text',
+    name: 'username',
   }, {
-    type: 'email'
+    id: 'user_email',
+    label: 'Email',
+    type: 'email',
+    name: 'email',
   }, {
-    type: 'number'
+    id: 'user_number',
+    label: 'Favorite Number',
+    type: 'number',
+    name: 'favorite_number',
   }, {
-    type: 'submit'
-  }
-]
+    type: 'submit',
+  },
+];
 ```
 
 ### Above and Beyond
@@ -28,10 +38,11 @@ Going beyond just the simple logging of HTML inputs, I was able to include a way
 ```
 app.js
 
-http.createServer(function(request, response) {  
-  response.writeHeader(200, {"Content-Type": "text/html"});  
-  response.write(formGenerator(inputs));
-  response.end();  
+// Creates a server, and runs it on port 8000
+http.createServer((request, response) => {
+  response.writeHeader(200, { 'Content-Type': 'text/html' });
+  response.write(formGenerator(formInputs));
+  response.end();
 }).listen(8000);
 ```
 
@@ -76,6 +87,25 @@ If working correctly, it should appear as follows:
 ```
 
 ### Testing
+
+
+#### Airbnb Style Guide Linting Test
+
+To run a check for code conformity to the Airbnb specifications, enter the following npm command into your command line:
+
+```
+npm run lint
+```
+
+On success, you should see something similar to this in your command line:
+
+```
+  AirBnB Style Guide Adhearance - eslint
+    ✓ should have no errors in src/app.js
+    ✓ should have no errors in src/tool.js
+```
+
+#### Form Generator Test
 
 The testing runs three different tests using Node's built-in assert library, to make sure the proper output is being produced.
 
