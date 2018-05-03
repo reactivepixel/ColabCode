@@ -25,10 +25,10 @@ This is a ordered list
 
 This is a Unordered sub-list
 
-1. One
-  * Two
+* One
+   * Two
     * Three
-4. four
+* four
   * Six
 
 This is a unordered list
