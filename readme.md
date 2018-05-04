@@ -30,6 +30,12 @@ checkout bhess-markdown
 $ git checkout bhess-markdown
 ```
 
+Create temp folder
+
+```
+$ mkdir temp
+```
+
 Run the app
 
 ```
@@ -75,8 +81,8 @@ const dataSet = [
 ];
 ```
 
-To edit where the markdown is created at change "./temp/readme.md" at the bottom of [markdown.js](/markdown.js)
+To edit what the markdown is called and where it's created simply edit this line "./temp/readme.md" in [markdown.js](/markdown.js)
 
 ```js
-fs.writeFile("./temp/readme.md", builder(dataset), function(err)
+fs.writeFile("./temp/readme.md", builder(dataset), (err) => {
 ```
