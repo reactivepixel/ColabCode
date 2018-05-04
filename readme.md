@@ -36,7 +36,7 @@ Create temp folder
 $ mkdir temp
 ```
 
-Run the app
+Run markdown builder
 
 ```
 $ npm start
