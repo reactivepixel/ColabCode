@@ -1,3 +1,5 @@
+const util = require('apex-util');
+
 module.exports.builder = (markdownInput) => {
   let markdown = [];
   const bt = '```'; // backticks
@@ -36,8 +38,7 @@ module.exports.builder = (markdownInput) => {
       }
     });
   } catch (error) {
-    console.log('Error: ' + error);
+    util.log('Error: ', error, 4);
   }
-  console.log('My Markdown \n', markdown);
   return markdown;
 };

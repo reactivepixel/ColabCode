@@ -1,4 +1,5 @@
-const util = require('./tool');
+const tool = require('./tool');
+const util = require('apex-util');
 const fs = require('fs');
 
 const dataSet = [
@@ -26,9 +27,9 @@ const dataSet = [
   { type: 'code_md', code: 'md\n<!-- md -->\n# H3 Title\n\nThis is a code block filler text number Three.\n' },
 ];
 
-fs.writeFile('./temp/readme.md', util.builder(dataSet), (err) => {
+fs.writeFile('./temp/readme.md', tool.builder(dataSet), (err) => {
   if (err) {
-    return console.log(err);
+    return util.log('Markdown failed to be created!', err, 4);
   }
-  return console.log('Markdown was created!');
+  return util.log('Markdown was created!', tool.builder(dataSet), 4);
 });

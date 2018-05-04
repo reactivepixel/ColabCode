@@ -36,6 +36,14 @@ Run the app
 $ npm start
 ```
 
+## Testing
+
+To run tests use this command and have [ESLint](eslint.org) installed
+
+```
+$ npm test
+```
+
 ## Functionality
 
 Edit dataset in [markdown.js](/markdown.js)
