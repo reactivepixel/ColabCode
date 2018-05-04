@@ -1,9 +1,10 @@
 const util = require('apex-util');
 
 module.exports.builder = (markdownInput) => {
-  let markdown = [];
+  let markdown = []; // empty string for output
   const bt = '```'; // backticks
   try {
+    // loop through array
     markdownInput.forEach((inputData) => {
       if (inputData.type) {
         switch (inputData.type) {

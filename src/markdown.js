@@ -2,6 +2,7 @@ const tool = require('./tool');
 const util = require('apex-util');
 const fs = require('fs');
 
+// Data that will be written to the file created below
 const dataSet = [
   { type: 'title', text: '## Headers H1-H6' },
   { type: 'h1', text: '# H1 Header' },
@@ -27,6 +28,7 @@ const dataSet = [
   { type: 'code_md', code: 'md\n<!-- md -->\n# H3 Title\n\nThis is a code block filler text number Three.\n' },
 ];
 
+// Creates a file in the location listed below
 fs.writeFile('./temp/readme.md', tool.builder(dataSet), (err) => {
   if (err) {
     return util.log('Markdown failed to be created!', err, 4);
